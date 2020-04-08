@@ -10,7 +10,7 @@ Phone input view for android based on <a href="https://github.com/lamudi-gmbh/an
 		}
 	}
 	dependencies {
-	        implementation 'com.github.mutasemhajhasan:PhoneInput:1.0.0'
+	        implementation 'com.github.mutasemhajhasan:PhoneInput:1.0.1'
 	}
   
 ## activity.xml
