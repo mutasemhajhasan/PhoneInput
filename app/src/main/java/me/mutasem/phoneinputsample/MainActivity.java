@@ -31,8 +31,20 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                boolean valid = true;
                 //validate phone number
-                if (phoneEditText.isValid() && phoneInputLayout.isValid())
+                if (!phoneEditText.isValid()) {
+                    phoneEditText.setError("invalid");
+                    valid = false;
+                } else
+                    phoneEditText.setError(null);
+                if (!phoneInputLayout.isValid()) {
+                    phoneInputLayout.setError("invalid");
+                    valid = false;
+                } else
+                    phoneInputLayout.setError(null);
+
+                if (valid)
                     Toast.makeText(MainActivity.this, phoneEditText.getPhoneNumber() + "," + phoneInputLayout.getPhoneNumber(), Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(MainActivity.this, "Invalid phone", Toast.LENGTH_SHORT).show();
