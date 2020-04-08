@@ -14,7 +14,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 
-
 import io.michaelrocks.libphonenumber.android.NumberParseException;
 import io.michaelrocks.libphonenumber.android.PhoneNumberUtil;
 import io.michaelrocks.libphonenumber.android.Phonenumber;
@@ -170,7 +169,7 @@ public abstract class PhoneField extends LinearLayout {
      */
     public boolean isValid() {
         try {
-            return mPhoneUtil.isValidNumber(parsePhoneNumber(getRawInput()));
+            return getRawInput().length() > 0 && mPhoneUtil.isValidNumber(parsePhoneNumber(getRawInput()));
         } catch (NumberParseException e) {
             return false;
         }
@@ -269,7 +268,7 @@ public abstract class PhoneField extends LinearLayout {
      * @return the raw input
      */
     public String getRawInput() {
-        return mEditText.getText().toString();
+        return mEditText.getText() != null ? mEditText.getText().toString() : "";
     }
 
     /**
