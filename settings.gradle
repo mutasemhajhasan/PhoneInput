@@ -1,0 +1,3 @@
+rootProject.name='PhoneInputSample'
+include ':app'
+include ':phoneinput'

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="flag_size">24dp</dimen>
+    <dimen name="spinner_height">300dp</dimen>
+    <dimen name="spinner_width">72dp</dimen>
+    <dimen name="spinner_text_size">16sp</dimen>
+</resources>
