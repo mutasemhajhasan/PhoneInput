@@ -22,13 +22,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         phoneEditText = findViewById(R.id.phoneEditText);
         phoneInputLayout = findViewById(R.id.phoneInputLayout);
+        //set default selected country
         phoneEditText.setDefaultCountry("SY");
         phoneInputLayout.setDefaultCountry("SY");
+        //to get the phone number
+        //String phone=phoneEditText.getPhoneNumber();
         submit = findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, phoneEditText.getPhoneNumber() + "," + phoneInputLayout.getPhoneNumber(), Toast.LENGTH_LONG).show();
+                //validate phone number
+                if (phoneEditText.isValid() && phoneInputLayout.isValid())
+                    Toast.makeText(MainActivity.this, phoneEditText.getPhoneNumber() + "," + phoneInputLayout.getPhoneNumber(), Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(MainActivity.this, "Invalid phone", Toast.LENGTH_SHORT).show();
             }
         });
     }
