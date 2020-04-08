@@ -1,5 +1,6 @@
 # PhoneInput
 Phone input view for android based on <a href="https://github.com/lamudi-gmbh/android-phone-field">android-phone-field</a>
+
 <img src="https://raw.githubusercontent.com/mutasemhajhasan/PhoneInput/master/demo.gif" />
 ## gradle
 
